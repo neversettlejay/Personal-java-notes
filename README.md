@@ -41,18 +41,18 @@ public class MainClass {
   }
 }
 
-Question: This is the snippet of Java code:
-
+Question: This is the snippet of Java code: 
+  
 int[][] uu = new int[1][1];
 uu[0][0] = 5;
 for(int[] u: uu){
     System.out.println(u[0]);
 }
+  
 It prints 5. But why does the declaration part of for loop is declared as int[] u, but not as int[][] u?
 
-Answer: Since your uu is an array of array. So, when you iterate over it, you will first get an array, and then you can iterate over that array to get individual elements.
-
-So, your outer loop has int[] as type, and hence that declaration. If you iterate through your u in one more inner loop, you will get the type int: -
+  
+Answer: Since your uu is an array of array. So, when you iterate over it, you will first get an array, and then you can iterate over that array to get individual elements. So, your outer loop has int[] as type, and hence that declaration. If you iterate through your u in one more inner loop, you will get the type int: -
 
 for (int[] u: uu) {
     for (int elem: u) {
